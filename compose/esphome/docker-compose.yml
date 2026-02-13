@@ -1,0 +1,13 @@
+services:
+  esphome:
+    container_name: esphome
+    image: ghcr.io/esphome/esphome:dev
+    volumes:
+      - /home/miika/.esp/esphome/config:/config
+      - /etc/localtime:/etc/localtime:ro
+    restart: unless-stopped
+    privileged: true
+    network_mode: host
+    environment:
+      - USERNAME=esphome
+      - PASSWORD=esphome
