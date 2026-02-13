@@ -1,7 +1,7 @@
 {
   "name": "Home Assistant",
   "description": "Open source home automation that puts local control and privacy first. Powered by a worldwide community of tinkerers and DIY enthusiasts.",
-  "icon": "https://github.com/miikasyvanen/mos-hub-templates/blob/main/images/homeassistant.png",
+  "icon": "https://github.com/miikasyvanen/mos-hub-templates/blob/a235bf839f55db6057432bb7055f30389b190e08/images/homeassistant.png",
   "webui": "https://www.home-assistant.io/",
   "category": "Smart Home"
 }
