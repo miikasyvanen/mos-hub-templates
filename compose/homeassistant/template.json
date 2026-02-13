@@ -1,7 +1,7 @@
 {
   "name": "Home Assistant",
   "description": "Open source home automation that puts local control and privacy first. Powered by a worldwide community of tinkerers and DIY enthusiasts.",
-  "icon": "https://raw.githubusercontent.com/home-assistant/frontend/master/public/static/icons/favicon-512x512.png",
+  "icon": "https://raw.githubusercontent.com/miikasyvanen/mos-hub-templates/refs/heads/main/images/homeassistant.png",
   "webui": "http://[IP]:[PORT:8123]",
   "category": "Smart Home"
 }
