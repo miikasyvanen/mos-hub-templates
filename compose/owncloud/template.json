@@ -2,6 +2,6 @@
   "name": "ownCloud",
   "description": "ownCloud is an open-source file sync, share and content collaboration software that lets teams work on data easily from anywhere, on any device.",
   "icon": "https://raw.githubusercontent.com/miikasyvanen/mos-hub-templates/refs/heads/main/images/owncloud.png",
-  "webui": "https://owncloud.com/",
+  "webui": "http://[IP]:[PORT:8080]",
   "category": "File Sync"
 }
