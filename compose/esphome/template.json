@@ -3,7 +3,7 @@
   "description": "ESPHome is a system to control your microcontrollers by simple yet powerful configuration files and control them remotely through Home Automation systems.",
   "icon": "https://raw.githubusercontent.com/miikasyvanen/mos-hub-templates/refs/heads/main/images/esphome.png",
   "website": "https://esphome.io/",
-  "webui": "http://[IP]:[PORT:6052]",
+  "web_ui_url": "http://[IP]:[PORT:6052]",
   "project": "https://github.com/esphome",
   "category": "Smart Home"
 }
