@@ -3,7 +3,7 @@ services:
     container_name: esphome
     image: ghcr.io/esphome/esphome:dev
     volumes:
-      - /home/miika/.esp/esphome/config:/config
+      - ./config:/config
       - /etc/localtime:/etc/localtime:ro
     restart: unless-stopped
     privileged: true
