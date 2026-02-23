@@ -1,0 +1,9 @@
+{
+  "name": "NgingProxyManager",
+  "description": "Expose your services easily and securely.",
+  "icon": "https://raw.githubusercontent.com/miikasyvanen/mos-hub-templates/refs/heads/main/images/nginx-proxy-manager.png",
+  "website": "https://nginxproxymanager.com/",
+  "web_ui_url": "http://[IP]:[PORT:81]",
+  "project": "https://github.com/NginxProxyManager/nginx-proxy-manager",
+  "category": "File Sync"
+}
