@@ -1,5 +1,5 @@
 {
-  "name": "NgingProxyManager",
+  "name": "NginxProxyManager",
   "description": "Expose your services easily and securely.",
   "icon": "https://raw.githubusercontent.com/miikasyvanen/mos-hub-templates/refs/heads/main/images/nginx-proxy-manager.png",
   "website": "https://nginxproxymanager.com/",
