@@ -1,0 +1,7 @@
+{
+  "name": "CloudflareTunnel",
+  "description": "Cloudflare Tunnel provides you with a secure way to connect your resources to Cloudflare without a publicly routable IP address.",
+  "icon": "https://raw.githubusercontent.com/miikasyvanen/mos-hub-templates/refs/heads/main/images/clodflare-tunnel.png",
+  "website": "https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/",
+  "category": "Secure Connections"
+}
