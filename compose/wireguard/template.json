@@ -1,0 +1,9 @@
+{
+  "name": "WireGuard",
+  "description": "WireGuard® is an extremely simple yet fast and modern VPN that utilizes state-of-the-art cryptography.",
+  "icon": "https://raw.githubusercontent.com/miikasyvanen/mos-hub-templates/refs/heads/main/images/wireguard.png",
+  "website": "https://www.wireguard.com/",
+  "web_ui_url": "http://[IP]:[PORT:51820]",
+  "project": "https://github.com/wg-easy/wg-easy",
+  "category": "Secure VPN tunnel"
+}
