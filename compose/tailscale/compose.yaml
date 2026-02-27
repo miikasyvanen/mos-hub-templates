@@ -2,6 +2,11 @@ services:
   tailscale-nginx:
     image: tailscale/tailscale:latest
     hostname: tailscale-nginx
+    environment:
+      - TS_AUTHKEY=${TS_AUTHKEY}
+      - TS_EXTRA_ARGS=${TS_EXTRA_ARGS}
+      - TS_STATE_DIR=${TS_STATE_DIR}
+      - TS_USERSPACE=${TS_USERSPACE}
     volumes:
       - ./tailscale-nginx/state:/var/lib/tailscale
     devices:
