@@ -1,0 +1,8 @@
+{
+  "name": "Tailscale",
+  "description": "A Zero Trust identity-based connectivity platform that replaces your legacy VPN, SASE, and PAM and connects remote teams, multi-cloud environments, CI/CD pipelines, Edge & IoT devices, and AI workloads.",
+  "icon": "https://raw.githubusercontent.com/miikasyvanen/mos-hub-templates/refs/heads/main/images/tailscale.png",
+  "website": "https://tailscale.com/",
+  "project": "https://github.com/tailscale/tailscale",
+  "category": "Secure Connections"
+}
