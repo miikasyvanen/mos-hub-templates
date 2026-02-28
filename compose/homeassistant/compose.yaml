@@ -9,3 +9,46 @@ services:
     restart: unless-stopped
     privileged: true
     network_mode: host
+    depends_on:
+      - mariadb # MariaDB is optional (only if you would like to use a different database for HA).
+
+  # MariaDb
+  # Add to Home Assistant configuration.yaml
+  # recorder:
+  #   purge_keep_days: 30
+  #   auto_purge: true
+  #   db_url: mysql://[HA_MYSQL_USER]:[HA_MYSQL_PASSWORD]@[HA_IP]:[MARIADB_PORT]/[HA_MYSQL_DATABASE]?charset=utf8
+  #
+  # If getting "Access denied" in HA for database user, use phpMyAdmin to change user password
+  mariadb:
+    container_name: mariadb
+    image: mariadb:latest
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${HA_MYSQL_DATABASE}
+      MYSQL_USER: ${HA_MYSQL_USER}
+      MYSQL_PASSWORD: ${HA_MYSQL_PASSWORD}
+      DB_HOST: http://localhost/
+      PGID: ${LOCAL_USER}
+      PUID: ${LOCAL_USER}
+    volumes:
+      # Local path where the database will be stored.
+      - ./mariadb:/var/lib/mysql
+      - ./mariadb/my.cnf:/etc/mysql/my.cnf:ro
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      - ${MARIADB_PORT}:3306
+
+  # phpMyAdmin
+  # Go to http://[MARIADB_MACHINE_IP]:[PHPMYADMIN_PORT] and login using user=root and password=MYSQL_ROOT_PASSWORD
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    restart: unless-stopped
+    depends_on:
+      - mariadb
+    environment:
+      PMA_HOST: mariadb
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    ports:
+      - ${PHPMYADMIN_PORT}:80
