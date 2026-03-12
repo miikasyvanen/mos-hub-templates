@@ -9,5 +9,5 @@ services:
     privileged: true
     network_mode: host
     environment:
-      - USERNAME=esphome
-      - PASSWORD=esphome
+      - USERNAME=${USERNAME}
+      - PASSWORD=${PASSWORD}
