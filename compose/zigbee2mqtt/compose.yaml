@@ -3,6 +3,7 @@ services:
         container_name: zigbee2mqtt
         image: ghcr.io/koenkk/zigbee2mqtt:latest
         restart: unless-stopped
+        network_mode: host
         volumes:
             - ./data:/app/data
             - /run/udev:/run/udev:ro
@@ -12,4 +13,6 @@ services:
             - TZ=Europe/Helsinki
         devices:
             # Make sure this matched your adapter location
-            - /dev/serial/by-id/usb-Texas_Instruments_TI_CC2531_USB_CDC___0X00124B0018ED3DDF-if00:/dev/ttyACM0
+            - source: /dev/serial/by-id/usb-Texas_Instruments_TI_CC2531_USB_CDC___0X00124B0018ED3DDF-if00
+              target: /dev/ttyACM0
+              permissions: rwm
