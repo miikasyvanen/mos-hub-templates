@@ -2,6 +2,10 @@ services:
   esphome:
     container_name: esphome
     image: ghcr.io/esphome/esphome:dev
+    # For adding e.g. ZigBee adapter. Make sure this matched your adapter location
+    #devices:
+    #  - source: /dev/serial/by-id/usb-Espressif_USB_JTAG_serial_debug_unit_54:32:04:0A:8A:9C-if00
+    #    target: /dev/ttyACM0  
     volumes:
       - ./config:/config
       - /etc/localtime:/etc/localtime:ro
