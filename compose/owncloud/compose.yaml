@@ -38,7 +38,7 @@ services:
       - ./files:/mnt/data
 
   mariadb:
-    image: mariadb:10.11 # minimum required ownCloud version is 10.9
+    image: mariadb:latest
     container_name: owncloud_mariadb
     restart: always
     environment:
@@ -57,7 +57,7 @@ services:
       - ./mysql:/var/lib/mysql
 
   redis:
-    image: redis:6
+    image: redis:latest
     container_name: owncloud_redis
     restart: always
     command: ["--databases", "1"]
@@ -67,4 +67,4 @@ services:
       timeout: 5s
       retries: 5
     volumes:
-      - ./redis:/data
+      - ./redis:/redis
