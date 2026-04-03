@@ -1,0 +1,55 @@
+# In MOS, after nvidia proprietary driver install, run below commands
+# nvidia-ctk cdi generate --output=/etc/cdi/nvidia.yaml
+# nvidia-ctk config --in-place --set nvidia-container-runtime.mode=cdi
+# After that, make sure below command shows card in list
+# nvidia-ctk cdi list
+services:
+  ollama:
+    volumes:
+      - ./ollama:/root/.ollama
+    container_name: ollama
+    pull_policy: always
+    tty: true
+    restart: unless-stopped
+    image: ollama/ollama:latest
+    # GPU support
+    # For NVIDIA GPU support with CDI (recommended for NVIDIA Container Toolkit 1.14+):
+    # Uncomment the following deploy section and use driver: nvidia.com/gpu
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: cdi
+              device_ids:
+                - nvidia.com/gpu=all
+              capabilities:
+                - gpu
+    # For legacy NVIDIA driver (for older NVIDIA Container Toolkit):
+    #deploy:
+    #  resources:
+    #    reservations:
+    #      devices:
+    #        - driver: nvidia
+    #          count: all
+    #          capabilities:
+    #            - gpu
+
+  open-webui:
+    build:
+      context: .
+      args:
+        OLLAMA_BASE_URL: "/ollama"
+      dockerfile: Dockerfile
+    image: ghcr.io/open-webui/open-webui:cuda
+    container_name: open-webui
+    tty: true
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      - "OLLAMA_BASE_URL=http://ollama:11434"
+      - "WEBUI_SECRET_KEY="
+    extra_hosts:
+      - host.docker.internal:host-gateway
+    volumes:
+      - ./open-webui-data:/app/backend/data
