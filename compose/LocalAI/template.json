@@ -1,9 +1,0 @@
-{
-  "name": "LocalAI",
-  "description": "The free, OpenAI, Anthropic alternative. Your All-in-One Complete AI Stack - Run powerful language models, autonomous agents, and document intelligence locally on your hardware.",
-  "icon": "https://raw.githubusercontent.com/miikasyvanen/mos-hub-templates/refs/heads/main/images/localai.png",
-  "website": "https://localai.io/",
-  "web_ui_url": "http://[IP]:[PORT:8080]",
-  "project": "https://github.com/mudler/LocalAI",
-  "category": "Arifical Intelligence"
-}
