@@ -1,7 +1,9 @@
-# In MOS, after nvidia proprietary driver install, run below commands
-# nvidia-ctk cdi generate --output=/etc/cdi/nvidia.yaml
-# nvidia-ctk cdi generate --output=/var/run/cdi/nvidia.yaml
+# In MOS, after nvidia proprietary driver install, add below script
+# to /boot/optional/scripts/post-start.sh
+# nvidia-ctk cdi generate --output=/etc/cdi/nvidia.yaml && \
+# nvidia-ctk cdi generate --output=/var/run/cdi/nvidia.yaml && \
 # nvidia-ctk config --in-place --set nvidia-container-runtime.mode=cdi
+#
 # After that, make sure below command shows card in list
 # nvidia-ctk cdi list
 services:
@@ -22,16 +24,16 @@ services:
             # GPU support
             # For NVIDIA GPU support with CDI (recommended for NVIDIA Container Toolkit 1.14+):
             # Uncomment the following deploy section and use driver: nvidia.com/gpu
-#            - driver: cdi
-#              device_ids:
-#                - nvidia.com/gpu=all
-#              capabilities:
-#                - gpu
-            # For legacy NVIDIA driver (for older NVIDIA Container Toolkit):
-            - driver: nvidia
-              count: all
+            - driver: cdi
+              device_ids:
+                - nvidia.com/gpu=all
               capabilities:
                 - gpu
+            # For legacy NVIDIA driver (for older NVIDIA Container Toolkit):
+#            - driver: nvidia
+#              count: all
+#              capabilities:
+#                - gpu
 
   open-webui:
     build:
