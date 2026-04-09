@@ -5,5 +5,5 @@
   "website": "https://nginxproxymanager.com/",
   "web_ui_url": "http://[IP]:[PORT:81]",
   "project": "https://github.com/NginxProxyManager/nginx-proxy-manager",
-  "category": "File Sync"
+  "category": "Hosting,Network"
 }
