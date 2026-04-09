@@ -4,5 +4,5 @@
   "description": "Zigbee to MQTT bridge, get rid of your proprietary Zigbee bridges.",
   "icon": "https://raw.githubusercontent.com/miikasyvanen/mos-hub-templates/refs/heads/main/images/zigbee2mqtt.png",
   "website": "https://www.zigbee2mqtt.io/",
-  "support": "https://github.com/Koenkk/zigbee2mqtt",
+  "support": "https://github.com/Koenkk/zigbee2mqtt"
 }
