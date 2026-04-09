@@ -1,9 +1,9 @@
 {
   "name": "Ollama",
+  "category": [ "AI" ],
   "description": "Ollama is the easiest way to get up and running with large language models such as gpt-oss, Gemma 3, DeepSeek-R1, Qwen3 and more.",
   "icon": "https://raw.githubusercontent.com/miikasyvanen/mos-hub-templates/refs/heads/main/images/ollama.png",
   "website": "https://ollama.com/",
   "web_ui_url": "http://[IP]:[PORT:8080]",
-  "project": "https://github.com/ollama/ollama",
-  "category": "AI"
+  "support": "https://github.com/ollama/ollama"
 }
