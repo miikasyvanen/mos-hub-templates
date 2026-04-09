@@ -4,5 +4,5 @@
   "icon": "https://raw.githubusercontent.com/miikasyvanen/mos-hub-templates/refs/heads/main/images/tailscale.png",
   "website": "https://tailscale.com/",
   "project": "https://github.com/tailscale/tailscale",
-  "category": "Secure Connections"
+  "category": "Network"
 }
