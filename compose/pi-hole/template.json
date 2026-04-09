@@ -4,5 +4,5 @@
   "description": "Network-wide Ad Blocking.",
   "icon": "https://raw.githubusercontent.com/miikasyvanen/mos-hub-templates/refs/heads/main/images/pi-hole.png",
   "website": "https://pi-hole.net/",
-  "project": "https://github.com/pi-hole"
+  "support": "https://github.com/pi-hole"
 }
