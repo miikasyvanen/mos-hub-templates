@@ -4,5 +4,5 @@
   "icon": "https://raw.githubusercontent.com/miikasyvanen/mos-hub-templates/refs/heads/main/images/zigbee2mqtt.png",
   "website": "https://www.zigbee2mqtt.io/",
   "project": "https://github.com/Koenkk/zigbee2mqtt",
-  "category": "Smart Home"
+  "category": "Home Automation"
 }
