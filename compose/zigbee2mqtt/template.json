@@ -1,6 +1,6 @@
 {
   "name": "Zigbee2MQTT",
-  "category": "Home Automation",
+  "category": [ "Home Automation" ],
   "description": "Zigbee to MQTT bridge, get rid of your proprietary Zigbee bridges.",
   "icon": "https://raw.githubusercontent.com/miikasyvanen/mos-hub-templates/refs/heads/main/images/zigbee2mqtt.png",
   "website": "https://www.zigbee2mqtt.io/",
