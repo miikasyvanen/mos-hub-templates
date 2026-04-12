@@ -1,0 +1,19 @@
+  open-webui:
+    build:
+      context: .
+      args:
+        OLLAMA_BASE_URL: "/ollama"
+      dockerfile: Dockerfile
+    image: ghcr.io/open-webui/open-webui:cuda
+    container_name: open-webui
+    tty: true
+    restart: unless-stopped
+    ports:
+      - ${OPEN_WEBUI_PORT}:8080
+    environment:
+      - OLLAMA_BASE_URL=http://${OLLAMA_HOST_IP}:${OLLAMA_HOST_PORT}
+      - WEBUI_SECRET_KEY=
+    extra_hosts:
+      - host.docker.internal:host-gateway
+    volumes:
+      - ./open-webui-data:/app/backend/data
