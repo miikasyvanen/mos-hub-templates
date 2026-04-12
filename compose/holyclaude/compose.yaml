@@ -1,6 +1,6 @@
 services:
   holyclaude:
-    image: coderluii/holyclaude:latest
+    image: coderluii/holyclaude:1.2.2
     container_name: holyclaude
     hostname: holyclaude
     restart: unless-stopped
