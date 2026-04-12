@@ -1,7 +1,7 @@
 {
   "name": "HolyClaude",
   "category": [ "AI" ],
-  "description": "Claude Code, CloudCLI web UI, headless browser, 7 AI CLIs, 50+ dev tools — containerized and ready.",
+  "description": "One container. Claude Code, web UI, 7 AI CLIs, headless browser, 50+ tools. All configured. All working.",
   "icon": "https://raw.githubusercontent.com/miikasyvanen/mos-hub-templates/refs/heads/main/images/holyclaude.png",
   "website": "https://holyclaude.coderluii.dev/",
   "web_ui_url": "http://[IP]:[PORT:11434]",
