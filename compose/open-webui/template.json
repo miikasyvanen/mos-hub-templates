@@ -1,0 +1,9 @@
+{
+  "name": "Open-WebUI",
+  "category": [ "AI" ],
+  "description": "Open WebUI is the platform for running AI on your own terms. Connect to any model—local or cloud. Extend with Python.",
+  "icon": "https://raw.githubusercontent.com/miikasyvanen/mos-hub-templates/refs/heads/main/images/open-webui.png",
+  "website": "https://openwebui.com/",
+  "web_ui_url": "http://[IP]:[PORT:8080]",
+  "support": "https://github.com/open-webui/open-webui"
+}
