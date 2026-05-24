@@ -25,7 +25,7 @@ services:
   #
   # If getting "Access denied" in HA for database user, use phpMyAdmin to change user password
   mariadb:
-    container_name: mariadb
+    container_name: ha_mariadb
     image: mariadb:latest
     restart: unless-stopped
     environment:
@@ -38,15 +38,16 @@ services:
       PUID: ${LOCAL_USER}
     volumes:
       # Local path where the database will be stored.
-      - ./mariadb:/var/lib/mysql
-      - ./mariadb/my.cnf:/etc/mysql/my.cnf:ro
+      - ./mysql:/var/lib/mysql
+      - ./mysql/my.cnf:/etc/mysql/my.cnf:ro
       - /etc/localtime:/etc/localtime:ro
     ports:
-      - ${MARIADB_PORT}:3306
+      - ${MYSQL_PORT}:3306
 
   # phpMyAdmin
   # Go to http://[MARIADB_MACHINE_IP]:[PHPMYADMIN_PORT] and login using user=root and password=MYSQL_ROOT_PASSWORD
   phpmyadmin:
+    container_name: ha_phpmyadmin
     image: phpmyadmin/phpmyadmin:latest
     restart: unless-stopped
     depends_on:
