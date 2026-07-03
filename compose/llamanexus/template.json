@@ -1,0 +1,9 @@
+{
+  "name": "LlamaNexus",
+  "category": [ "AI" ],
+  "description": "LlamaNexus is the easiest way to get up and running distributed inference with large language models.",
+  "icon": "https://raw.githubusercontent.com/miikasyvanen/mos-hub-templates/refs/heads/main/images/llamanexus.png",
+  "website": "https://github.com/miikasyvanen/llamanexus",
+  "web_ui_url": "http://[IP]:[PORT:8080]",
+  "support": "https://github.com/miikasyvanen/llamanexus"
+}
