@@ -1,0 +1,18 @@
+services:
+  llamanexus:
+    container_name: llamanexus
+    image: makershop/llamanexus:latest
+    pull_policy: always
+    tty: true
+    network_mode: host
+    restart: unless-stopped
+    ports:
+      - "50052:50052"
+    command: worker --discovery
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
