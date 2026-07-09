@@ -1,11 +1,10 @@
 services:
   llamanexus:
     container_name: llamanexus
-    image: makershop/llamanexus:latest
+    image: makershop/llamanexus:cuda-12-latest
     pull_policy: always
     tty: true
     network_mode: host
-    restart: unless-stopped
     ports:
       - "50052:50052"
     command: worker --discovery
