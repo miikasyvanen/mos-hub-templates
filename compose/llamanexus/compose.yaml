@@ -1,20 +1,22 @@
 services:
   llamanexus:
     container_name: llamanexus
-    image: makershop/llamanexus:latest
-    pull_policy: always
+    image: makershop/llamanexus:cuda-12-latest
+    pull_policy: never
+    #pull_policy: always
     tty: true
-    restart: unless-stopped
+    network_mode: host
     ports:
       - "11434:11434"
+      - "50051:50051"
     volumes:
       - ./models:/root/.cache/huggingface
     environment:
       - PYTHONUNBUFFERED=1
       - HF_HUB_DISABLE_PROGRESS_BARS=0
       - TQDM_DISABLE=0
-      - HF_TOKEN=${HF_TOKEN} # remove if not used
-    command: serve --port 11434 --llamaport 8080 -v --discovery # -- --rpc 192.168.1.10:50052,192.168.1.11:50052 # use double dash to separate arguments to pass to llama-server
+      - HF_TOKEN=${HF_TOKEN}
+    command: serve --port 11434 --llama-port 8080 -v --discovery -- --jinja --context-shift
     deploy:
       resources:
         reservations:
