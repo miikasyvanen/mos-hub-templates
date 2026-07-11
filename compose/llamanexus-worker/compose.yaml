@@ -1,7 +1,7 @@
 services:
   llamanexus:
     container_name: llamanexus
-    image: makershop/llamanexus:cuda-12-latest
+    image: makershop/llamanexus:cuda-12.2.0-latest
     pull_policy: always
     tty: true
     network_mode: host
