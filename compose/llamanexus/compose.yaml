@@ -1,7 +1,7 @@
 services:
   llamanexus:
     container_name: llamanexus
-    image: makershop/llamanexus:cuda-12-latest
+    image: makershop/llamanexus:cuda-12.2.0-latest
     pull_policy: never
     #pull_policy: always
     tty: true
@@ -16,7 +16,7 @@ services:
       - HF_HUB_DISABLE_PROGRESS_BARS=0
       - TQDM_DISABLE=0
       - HF_TOKEN=${HF_TOKEN}
-    command: serve --port 11434 --llama-port 8080 -v --discovery -- --jinja --context-shift
+    command: serve --port 11434 --llama-port 8080 -v --discovery -- --context-shift
     deploy:
       resources:
         reservations:
