@@ -1,5 +1,5 @@
 {
-  "name": "LlamaNexus Worker",
+  "name": "LlamaNexus-Worker",
   "category": [ "AI" ],
   "description": "LlamaNexus is the easiest way to get up and running distributed inference with large language models.",
   "icon": "https://raw.githubusercontent.com/miikasyvanen/mos-hub-templates/refs/heads/main/images/llamanexus.png",
