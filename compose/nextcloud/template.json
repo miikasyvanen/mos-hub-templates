@@ -1,0 +1,9 @@
+{
+  "name": "Nextcloud",
+  "category": [ "Backup" ],
+  "description": "Nextcloud is an open-source file sync, share and content collaboration software that lets teams work on data easily from anywhere, on any device.",
+  "icon": "https://raw.githubusercontent.com/miikasyvanen/mos-hub-templates/refs/heads/main/images/nextcloud.png",
+  "website": "https://nextcloud.com/",
+  "web_ui_url": "http://[IP]:[PORT:8080]",
+  "support": "https://github.com/nextcloud"
+}
