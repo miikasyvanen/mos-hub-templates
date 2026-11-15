@@ -1,0 +1,26 @@
+services:
+  nextcloud:
+    container_name: nextcloud
+    image: nextcloud:apache
+    environment:
+      - POSTGRES_HOST=postgresql
+      - POSTGRES_PASSWORD=nextcloud
+      - POSTGRES_DB=nextcloud
+      - POSTGRES_USER=nextcloud
+    ports:
+      - 80:80
+    restart: unless-stopped
+    volumes:
+      - ./files:/var/www/html
+  postgresql:
+    container_name: nextcloud-postgres
+    image: postgres:alpine
+    environment:
+      - POSTGRES_PASSWORD=nextcloud
+      - POSTGRES_DB=nextcloud
+      - POSTGRES_USER=nextcloud
+    restart: unless-stopped
+    volumes:
+      - ./postgresql:/var/lib/postgresql/data
+    expose:
+      - 5432
