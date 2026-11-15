@@ -4,11 +4,11 @@ services:
     image: nextcloud:apache
     environment:
       - POSTGRES_HOST=postgresql
-      - POSTGRES_PASSWORD=nextcloud
-      - POSTGRES_DB=nextcloud
-      - POSTGRES_USER=nextcloud
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - POSTGRES_DB=${DATABASE}
+      - POSTGRES_USER=${DB_USERNAME}
     ports:
-      - 80:80
+      - ${HTTP_PORT}:80
     restart: unless-stopped
     volumes:
       - ./files:/var/www/html
@@ -16,9 +16,9 @@ services:
     container_name: nextcloud-postgres
     image: postgres:alpine
     environment:
-      - POSTGRES_PASSWORD=nextcloud
-      - POSTGRES_DB=nextcloud
-      - POSTGRES_USER=nextcloud
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - POSTGRES_DB=${DATABASE}
+      - POSTGRES_USER=${DB_USERNAME}
     restart: unless-stopped
     volumes:
       - ./postgresql:/var/lib/postgresql/data
